@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Roulette</title>
+<link href="../_css/style.css" rel="stylesheet">
+<!--<script src="../_js/jquery.min.js"></script>-->
+</head>
+<body>
+   <div id="list">
+        <ul>
+            <li><a href="Home.html">首頁</a></li>
+            <li><a href="sorting.html">分頁</a></li>
+            <li><a href="circle.html">輪盤</a></li>
+            <li>search<input type="search" id="search"/></li>
+        </ul>
+    </div>
+    <div>
+     <h1 id="sortTitle">今天要吃什麼呢?</h1>
+        <div id="circleText">
+        <p id="circletext">分成<input type="number" id="quantity"/>等分</p>
+        <p id="circletext">選項</p>
+        <div class="cal_value">
+            <select id="circleOption">
+                <option >布朗-趣胡桃鉗先生</option>
+                <option >可可熊</option>
+                <option >傑尼兔</option>
+                <option >Miru's house</option>
+                <option >mummum滿滿</option>
+                <option >QQ蛋餅</option>
+                <option >Charming蜜糖吐司咖啡異國料理</option>
+                <option >破舍咖啡</option>
+                <option >玩味餐桌 Tasting Table</option>
+                <option >街區商號</option>
+                <option >心空咖啡</option>
+                <option >冰果Bingo</option>
+                <option >菓點子</option>
+                <option >Tea's 原味</option>
+                <option >你的果汁</option>
+                <option >檸檬草泰式小館</option>
+                <option >破舍咖啡</option>
+                <option >月香小館</option>
+                <option >慕堤意廚</option>
+                <option >Pasta Good Good</option>
+                <option >Pin Pizza Bar品手感披薩</option>
+                <option >川一品鍋</option>
+                <option >嘉義老牌石頭火鍋</option>
+                <option >一畝田拉麵水餃</option>
+                <option >鐵的鍋物</option>
+                <option >貓寶涼麵</option>
+                <option >好滋味麵館</option>
+                <option >粵華燒臘快餐</option>
+                <option >梁媽媽手工水餃</option>
+                <option >林記麵食館</option>
+                <option >微笑的魚</option>
+            </select>
+        </div>
+        <p id="submit">OK</p>
+        </div>
+    </div>
+    
+    <canvas id="myCanvas" width="400" height="400">myCanvas</canvas>
+    <script>
+        var canvas = document.getElementById("myCanvas");
+        var ctx = canvas.getContext("2d");
+        
+        //輪盤 我放棄了對不起
+        ctx.beginPath();
+		ctx.moveTo(200,200);
+		ctx.arc(200, 200, 150, 0, 360*Math.PI/180, false);
+		ctx.fillStyle = "pink";
+		ctx.fill();
+        
+        //決定
+        ctx.lineWidth="10";
+        ctx.beginPath();
+        ctx.moveTo(190,35);
+        ctx.lineTo(210,35);
+        ctx.lineTo(200,60);
+        ctx.moveTo(190,35);
+        ctx.fillStyle = "#229398";
+        ctx.fill();
+        
+    </script>
+    <p id="ansText">決定了!吃</p>
+</body>
+</html>
